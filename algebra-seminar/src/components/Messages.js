@@ -9,8 +9,8 @@ class Messages extends Component {
         {messages.map(m => this.renderMessage(m))}
       </ul>
     );
-  }
-  
+  };
+
   renderMessage(message) {
     const {member, text} = message;
     const {currentMember} = this.props;
@@ -21,11 +21,11 @@ class Messages extends Component {
       <li className={className}>
         <span
           className="avatar"
-          style={{backgroundColor: member.clientData.color}}
+          style={{backgroundColor: member.color}}
         />
         <div className="Message-content">
           <div className="username">
-            {member.clientData.username}
+            {member.username}
           </div>
           <div className="text">{text}</div>
         </div>
