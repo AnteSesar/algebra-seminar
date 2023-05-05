@@ -51,6 +51,7 @@ class App extends React.Component {
   }  
 
   onSendMessage = (message) => {
+    if (message.length===0) return;
     this.drone.publish({
       room: "observable-room",
       message
