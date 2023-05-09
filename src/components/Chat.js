@@ -2,6 +2,7 @@ import Messages from './Messages';
 import React from 'react';
 import Input from "./Input";
 import Sidebar from './Sidebar';
+import "./Chat.css";
 
 function randomName() {
  const adjectives = ["autumn", "hidden", "bitter", "misty", "silent", "empty", "dry", "dark", "summer", "icy", "delicate", "quiet", "white", "cool", "spring", "winter", "patient", "twilight", "dawn", "crimson", "wispy", "weathered", "blue", "billowing", "broken", "cold", "damp", "falling", "frosty", "green", "long", "late", "lingering", "bold", "little", "morning", "muddy", "old", "red", "rough", "still", "small", "sparkling", "throbbing", "shy", "wandering", "withered", "wild", "black", "young", "holy", "solitary", "fragrant", "aged", "snowy", "proud", "floral", "restless", "divine", "polished", "ancient", "purple", "lively", "nameless"];
@@ -16,8 +17,8 @@ function randomColor() {
 }
 class Chat extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.drone = new window.Scaledrone("PnFavtIMvMsf69yV", {
       data: this.state.member
     });
@@ -42,7 +43,7 @@ class Chat extends React.Component {
   state = {
     messages: [],
     member: {
-      username: randomName(),
+      username: this.props.username,
       color: randomColor()
     }
   }
@@ -64,7 +65,7 @@ class Chat extends React.Component {
       <div className="App">
       <div className="App-header">
         <button className='sidebar-btn' onClick={this.toggleSidebar}>Sidebar</button>
-        <h1>Algebra Seminarski Rad</h1>
+        <h1>{this.props.username}'s Chat Room</h1>
         {/* Prazan div služi za flex pozicioniranje elemenata */}
         <div></div>
       </div>
