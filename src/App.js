@@ -1,7 +1,8 @@
 import './App.css';
 import './components/Messages';
 import Messages from './components/Messages';
-import React from 'react';
+import React, { Component } from 'react';
+import Input from './components/input';
 
 function randomName() {
   const adjectives = ["autumn", "hidden", "bitter", "misty", "silent", "empty", "dry", "dark", "summer", "icy", "delicate", "quiet", "white", "cool", "spring", "winter", "patient", "twilight", "dawn", "crimson", "wispy", "weathered", "blue", "billowing", "broken", "cold", "damp", "falling", "frosty", "green", "long", "late", "lingering", "bold", "little", "morning", "muddy", "old", "red", "rough", "still", "small", "sparkling", "throbbing", "shy", "wandering", "withered", "wild", "black", "young", "holy", "solitary", "fragrant", "aged", "snowy", "proud", "floral", "restless", "divine", "polished", "ancient", "purple", "lively", "nameless"];
@@ -17,30 +18,57 @@ function randomColor() {
 
 class App extends React.Component {
 
-  state = {
-    messages: [
-      {
-        text: "This is a test message!",
-        member: {
-          color: "blue",
-          username: "bluemoon"
-        }
+  constructor() {
+    super();
+    this.drone = new window.Scaledrone("YnAavhGS5tvZNcEr", {
+      data: this.state.member
+    });
+    this.drone.on('open', error => {
+      if (error) {
+        return console.error(error);
       }
-    ],
+      const member = {...this.state.member};
+      member.id = this.drone.clientId;
+      this.setState({member});
+    });
+
+    const room = this.drone.subscribe("observable-room");
+
+    room.on('data', (data, member) => {
+      const messages = this.state.messages;
+      messages.push({member, text: data});
+      this.setState({messages});
+    });
+    
+  }
+
+  state = {
+    messages: [],
     member: {
       username: randomName(),
       color: randomColor()
     }
+  }  
+
+  onSendMessage = (message) => {
+    if (message.length===0) return;
+    this.drone.publish({
+      room: "observable-room",
+      message
+    });
   }
 
   render() {
     return (
       <div className="App">
-        Chat app
+        <div className="App-header">
+        <h1>My Pain and Suffering App</h1>
+      </div>
         <Messages
           messages={this.state.messages}
           currentMember={this.state.member}
         />
+        <Input onSendMessage={this.onSendMessage}/>
       </div>
     );
   }
