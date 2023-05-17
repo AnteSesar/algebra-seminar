@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/algebra-seminar/static/css/main.5ed69976.css",
+    "main.js": "/algebra-seminar/static/js/main.ac94a203.js",
+    "index.html": "/algebra-seminar/index.html",
+    "main.5ed69976.css.map": "/algebra-seminar/static/css/main.5ed69976.css.map",
+    "main.ac94a203.js.map": "/algebra-seminar/static/js/main.ac94a203.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ed69976.css",
+    "static/js/main.ac94a203.js"
+  ]
+}
