@@ -9,7 +9,7 @@ class Messages extends Component {
         {messages.map(m => this.renderMessage(m))}
       </ul>
     );
-  };
+  }
 
   renderMessage(message) {
     const {member, text} = message;
@@ -18,11 +18,11 @@ class Messages extends Component {
     const className = messageFromMe ?
       "Messages-message currentMember" : "Messages-message";
     return (
-      <li className={className}>
-        <span
-          className="avatar"
-          style={{backgroundColor: member.clientData.color}}
-        />
+      <li className={className} key={text + "_" + new Date().getTime().toString()}>
+      <span
+        className="avatar"
+        style={{backgroundColor: member.clientData.color}}
+      />
         <div className="Message-content">
           <div className="username">
             {member.clientData.username}
