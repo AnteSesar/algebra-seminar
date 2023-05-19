@@ -11,7 +11,7 @@ class Chat extends React.Component {
 
   constructor(props) {
     super(props);
-    this.drone = new window.Scaledrone("PnFavtIMvMsf69yV", {
+    this.drone = new window.Scaledrone("YnAavhGS5tvZNcEr", {
       data: this.state.member
     });
     this.drone.on('open', error => {
