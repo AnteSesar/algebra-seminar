@@ -14,10 +14,10 @@ const Login = (props) =>{
     
     return (
       
-    <div className="container">
+    <div className="login-container">
         <form className="login-form" onSubmit={handleSubmit}>
             <label htmlFor="title">
-                <h1>Login</h1>
+                <h1 class="h1-login">Login</h1>
             </label>
             <input 
             id="title"

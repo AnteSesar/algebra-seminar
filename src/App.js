@@ -28,20 +28,20 @@ class App extends React.Component{
 
   render(){
     return   ( 
-       <div className="App">  
-         <Header toggleSidebar={this.toggleSidebar} username={this.state.username} handleLogout={this.handleLogout} /> 
-         <Sidebar ref={(reference)=> this.sidebar = reference}/> 
+      <div className="App">  
+        <Header toggleSidebar={this.toggleSidebar} username={this.state.username} handleLogout={this.handleLogout} /> 
+        <Sidebar ref={(reference)=> this.sidebar = reference}/> 
           <Routes>
-              <Route path="/algebra-seminar/" 
-                element={ this.state.username ? <Chat username={this.state.username}/> : 
-                  <Navigate to="/algebra-seminar/login" />} />
-              <Route path="/algebra-seminar/login" element={<Login onLogin={this.handleLogin} 
-                  username={this.state.username}/>} />
-              <Route path="/algebra-seminar/about" 
-                element={this.state.username ? <About />: 
-                  <Navigate to="/algebra-seminar/login" /> } />
-            </Routes>
-    </div>
+            <Route path="/algebra-seminar/" 
+              element={ this.state.username ? <Chat username={this.state.username}/> : 
+                <Navigate to="/algebra-seminar/login" />} />
+            <Route path="/algebra-seminar/login" element={<Login onLogin={this.handleLogin} 
+                username={this.state.username}/>} />
+            <Route path="/algebra-seminar/about" 
+              element={this.state.username ? <About />: 
+                <Navigate to="/algebra-seminar/login" /> } />
+          </Routes>
+      </div>
     )
   }
 }

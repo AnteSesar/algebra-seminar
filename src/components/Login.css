@@ -14,3 +14,11 @@
     margin-bottom: 2rem;
     width: 6rem;
   }
+  .login-container {
+    background-color: #262626;
+    height: 100vh;
+    overflow: visible;
+  }
+  .h1-login{
+    font-weight: bold;
+  }
