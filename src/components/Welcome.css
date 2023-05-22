@@ -1,0 +1,84 @@
+
+.welcome-container {
+    font-weight: bold;
+    background-color: black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+}
+
+.loading-bar {
+    width: 100vw;
+    /* max-width: 100vw; */
+    height: 20px;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    transition: width 2s linear; /* Transition property */
+}
+
+.loading-bar.loaded {
+    width: 20px; /* Final width */
+}
+
+.progress {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: relative;
+    animation: loading-animation 2s linear forwards;
+}
+
+@keyframes loading-animation {
+    0% { left: 0; }
+    100% { left: 100%; }
+}
+
+.enter-text {
+    color: white;
+    font-size: 4em;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fade-in 0.5s linear forwards;
+    animation-delay: 2s; /* Delay the appearance of the "ENTER" text */
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.welcome-text {
+    color: white;
+    font-size: 4em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    opacity: 1;
+    animation: fade-out-1 0.5s linear forwards;
+    animation-delay: 2s;
+    user-select: none;
+}
+
+@keyframes fade-out-1 {
+    0% { opacity: 1; }
+    100% { opacity: 0.15; }
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+@keyframes fade-out-2 {
+0% { opacity: 0.15; }
+100% { opacity: 0; }
+}
+
+@keyframes fade-out-3 {
+0% { opacity: 1; }
+100% { opacity: 0; }
+}
