@@ -20,11 +20,11 @@ class Sidebar extends React.Component{
     render(){
         const {isOpen} = this.state;
         return(
-        <div className="container-fluid mt-3"> 
+        <div className="container-fluid"> 
             <div className={`sidebar ${isOpen === true ? "active" : ""}`}>
                 <div className="sd-header">
-                    <h4>Sidebar Header</h4>
-                    <div className="btn btn-primary" onClick={this.ToggleSidebar}>Close Sidebar</div>
+                    <h4>Hello!</h4>
+                    <div className="btn btn-primary" onClick={this.ToggleSidebar}>Close</div>
                 </div>
                 <div className="sd-body">
                     <ul>

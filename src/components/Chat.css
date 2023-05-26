@@ -70,7 +70,7 @@
   }
   
   .currentMember > .Message-content .text {
-    background-color: orangered;
+    background-color: coral;
   }
   
   form {
@@ -85,21 +85,24 @@
     padding: 5px;
     font-size: 16px;
     border-radius: 8px;
-    border: 3px solid orangered;
+    border: 3px solid navy;
     flex-grow: 1;
   }
   
   button {
     padding: 5px 10px;
     font-size: 16px;
-    background-color: orangered;
+    background-color: coral;
     color: white;
     border: none;
     border-radius: 8px;
     margin-left: 10px;
+    border-radius: 8px;
   }
 
   .btn-send{
     border-radius: 8px;
     margin-left: 10px;
+    background-color: navy;
   }
+

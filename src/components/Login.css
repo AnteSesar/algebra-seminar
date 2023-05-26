@@ -1,7 +1,7 @@
 .login-form {
     display: flex;
     flex-direction: column;
-    background-color: lightgray;
+    background-color: coral;
     border-radius: 20px;
     margin-top: 2rem;
     justify-content: center;
@@ -11,6 +11,24 @@
     margin-top: 2rem;
   }
   .login-btn {
+    background-color: navy;
     margin-bottom: 2rem;
     width: 6rem;
+    border-radius: 8px;
+  }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @font-face {
+    font-family: 'TiltNeon-Regular';
+    font-style: normal;
+    font-weight: bold;
+    src: url('./Fonts/TiltNeon-Regular.ttf') format('truetype');
   }

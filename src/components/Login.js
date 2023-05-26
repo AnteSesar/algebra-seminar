@@ -17,7 +17,7 @@ const Login = (props) =>{
     <div className="container">
         <form className="login-form" onSubmit={handleSubmit}>
             <label htmlFor="title">
-                <h1>Login</h1>
+                <h1 style={{ fontFamily: 'TiltNeon-Regular' }}>Login</h1>
             </label>
             <input 
             id="title"
@@ -26,7 +26,7 @@ const Login = (props) =>{
             required 
             value={usernameText} 
             onChange={(e)=> setUsernameText(e.target.value)}/>
-            <button className="login-btn">Login</button>
+            <button className="login-btn" style={{ fontFamily: 'TiltNeon-Regular' }}>Login</button>
         </form>
     </div>)
 }
