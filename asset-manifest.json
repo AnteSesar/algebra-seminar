@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/algebra-seminar/static/css/main.5ed69976.css",
-    "main.js": "/algebra-seminar/static/js/main.17bce58e.js",
+    "main.css": "/algebra-seminar/static/css/main.27cc7fd9.css",
+    "main.js": "/algebra-seminar/static/js/main.0ea7b081.js",
+    "static/media/TiltNeon-Regular.ttf": "/algebra-seminar/static/media/TiltNeon-Regular.77524edea0f2ebb03859.ttf",
     "index.html": "/algebra-seminar/index.html",
-    "main.5ed69976.css.map": "/algebra-seminar/static/css/main.5ed69976.css.map",
-    "main.17bce58e.js.map": "/algebra-seminar/static/js/main.17bce58e.js.map"
+    "main.27cc7fd9.css.map": "/algebra-seminar/static/css/main.27cc7fd9.css.map",
+    "main.0ea7b081.js.map": "/algebra-seminar/static/js/main.0ea7b081.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ed69976.css",
-    "static/js/main.17bce58e.js"
+    "static/css/main.27cc7fd9.css",
+    "static/js/main.0ea7b081.js"
   ]
 }
