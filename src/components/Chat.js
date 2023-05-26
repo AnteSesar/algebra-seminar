@@ -1,7 +1,7 @@
 import Messages from './Messages';
 import React from 'react';
 import Input from "./Input";
-import Sidebar from './Sidebar';
+//import Sidebar from './Sidebar';
 import "./Chat.css";
 
 function randomColor() {
@@ -55,7 +55,7 @@ class Chat extends React.Component {
         messages={this.state.messages}
         currentMember={this.state.member}
       />
-      <Input onSendMessage={this.onSendMessage}/>
+      <Input className="btn-send" onSendMessage={this.onSendMessage}/>
     </div>
     );
   }

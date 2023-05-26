@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'TiltNeon-Regular';
+    font-style: normal;
+    font-weight: bold;
+    src: url('./Fonts/TiltNeon-Regular.ttf') format('truetype');
+  }
+
+  .sidebar-btn {
+    border-radius: 8px;
+  }
+
+  .logout-btn {
+    border-radius: 8px;
+  }
